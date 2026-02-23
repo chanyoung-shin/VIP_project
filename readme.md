@@ -1,0 +1,3 @@
+version info
+pandas     3.0.1
+numpy      2.3.5
