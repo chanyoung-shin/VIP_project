@@ -82,3 +82,7 @@ Therefore, I collected variables for those who simply have unhealthy factors and
 
 ## STRESS OR MENTAL FACTOR
  I collected variables regarding the presence or absence of mental health issues, such as anxiety disorders, and whether or not the participants were taking medication or receiving counseling to address their anxiety disorders. This could be particularly valuable for analyzing cancer incidence and post-cancer survival rates for individuals without a history of mental disorders, individuals with mental disorders who were treated for anxiety disorders with medication or specific methods, individuals who were treated with medication, and individuals who were treated with counseling.
+
+## 2/23/2026 labnote (Chanyoung Shin)
+I wrote a source code to count the number of data in each variable of Excel data. Looking at the results, it seems that there is a typo in the Excel variable name or my sample data is incorrect.
+https://github.com/chanyoung-shin/VIP_project
