@@ -83,6 +83,22 @@ Therefore, I collected variables for those who simply have unhealthy factors and
 ## STRESS OR MENTAL FACTOR
  I collected variables regarding the presence or absence of mental health issues, such as anxiety disorders, and whether or not the participants were taking medication or receiving counseling to address their anxiety disorders. This could be particularly valuable for analyzing cancer incidence and post-cancer survival rates for individuals without a history of mental disorders, individuals with mental disorders who were treated for anxiety disorders with medication or specific methods, individuals who were treated with medication, and individuals who were treated with counseling.
 
-## 2/23/2026 labnote (Chanyoung Shin)
+# 2/23/2026 labnote (Chanyoung Shin)
 I wrote a source code to count the number of data in each variable of Excel data. Looking at the results, it seems that there is a typo in the Excel variable name or my sample data is incorrect.
 https://github.com/chanyoung-shin/VIP_project
+
+# 3/06/2026 labnote(Chanyoung Shin)
+Last week, I mentioned that the program couldn't load certain variables. That wasn't because the dataset was incorrect or there were typos. The variable names in the questionnaire and the dataset are different! For example, if there's a variable named WEIGHT, it's divided into WEIGHT_A and WEIGHT_B. Typically, _A represents variables for adults, _B and C represent variables for children, not adults. This information is available in the NHIS website's codebook.
+
+# 3/12/2026 labnote(Chanyoung Shin)
+
+Based on the 2022 codebook, I've reviewed the following variables in Google Sheets: SEX_A, AGENO, NEWNATORG_A, NEWRACE_A, RACEOTHER_A, EDUC_A, PHSTAT_A, CANEV_A, CANKIND1_A, CANAGE1_A. However, more discussion seems necessary before extracting the data.
+
+SEX_A -> Use as is.
+EDUCP_A -> Use as is.
+PHSTAT_A -> Use as is.
+NEWRACE_A / RACEOTHER_A -> Use the RACEALLP_A variable.
+NEWNATORG_A -> Use the HISDETP_A variable.
+CANAGE1_A, CANKIND1_A -> Dozens of variables are stored by cancer type, rather than using the NHIS questionnaire variables as is. Variables are divided from pages 51 to 100 (e.g., lung cancer, blood cancer, age under 85 when diagnosed). If we want to use this data, we can combine all variables and then use our method of assigning numbers to each variable individually.
+
+AGENO -> Not in the codebook. It's not simply a number from 1 to 120, but rather a question about whether the person is over a certain age. There are variables for AGE65, AGE18 (not in the codebook), and AGEP_A. Therefore, it seems likely that you should use the AGE65 or AGEP_A variables instead.
