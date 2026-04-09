@@ -102,3 +102,12 @@ NEWNATORG_A -> Use the HISDETP_A variable.
 CANAGE1_A, CANKIND1_A -> Dozens of variables are stored by cancer type, rather than using the NHIS questionnaire variables as is. Variables are divided from pages 51 to 100 (e.g., lung cancer, blood cancer, age under 85 when diagnosed). If we want to use this data, we can combine all variables and then use our method of assigning numbers to each variable individually.
 
 AGENO -> Not in the codebook. It's not simply a number from 1 to 120, but rather a question about whether the person is over a certain age. There are variables for AGE65, AGE18 (not in the codebook), and AGEP_A. Therefore, it seems likely that you should use the AGE65 or AGEP_A variables instead.
+
+# 03/23/2026 Chanyoung Shin’s labnote
+My Python program indicates that it cannot extract the two variables 'MODN_A' and 'MODTP_A'. All other variables load successfully. 
+Upon directly opening and checking the CSV file, it indicates that two variables could not be found; it appears that the variable names are incorrect.
+
+ 'MODN_A->MODNR_A,  MODTP_A-> MODTPR_A
+
+# 03/27/2026 Chanyoung Shin’s labnote
+I have discovered a useful variable. I recall that we previously decided to conduct our analysis by grouping subjects into just two categories—whether or not they had cancer—rather than distinguishing between specific types of cancer. However, instead of needing to consolidate the 30 separate cancer-related variables, it appears we can simply utilize the variable `NUMCAN_A`; this variable indicates the total number of times an individual has been diagnosed with cancer over the course of their lifetime.
